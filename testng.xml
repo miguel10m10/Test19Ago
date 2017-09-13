@@ -8,6 +8,7 @@
             <class name="tests.testCases.ReadExcelDataProvider"/>
             <class name="tests.testCases.ReadExcelDataProvider"/>
             <class name="tests.testCases.ReadExcelDataProvider"/>
+            <class name="tests.testCases.ReadExcelDataProvider"/>
         </classes>
     </test>
 </suite>
