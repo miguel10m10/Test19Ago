@@ -6,7 +6,6 @@
         <classes>
             <class name="tests.testCases.Test1"/>
             <class name="tests.testCases.ReadExcelDataProvider"/>
-            <class name="tests.testCases.ReadExcelDataProvider"/>
         </classes>
     </test>
 </suite>
