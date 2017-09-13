@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+    <!-- LOGIN -->
+    <entry key="marcadores.login.button">Marcadores - Click sobre el boton Login</entry>
+    <entry key="marcadores.login.user">Marcadores - Inserta el usuario</entry>
+    <entry key="marcadores.login.password">Marcadores - Inserta la contraseña</entry>
+    <entry key="marcadores.login.validation">Marcadores - Validado el inicio de sesion</entry>
+
+
+
+    <entry key="testcase.fail">Marcadores - Test Case Failed</entry>
+    <entry key="testcase.pass">Marcadores - Test Case Passed</entry>
+
+
+
+</properties>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="url">http://www.parley.com.ve</entry>
+    <entry key="language.properties">ES</entry>
+
+
+
+
+    <entry key="selenium.remote">FALSE</entry>
+    <entry key="selenium.grid.ip">10.10.10</entry>
+    <entry key="browser">FIREFOX</entry>
+    <entry key="path.firefox.profile"></entry>
+    <entry key="browser.timeout">10</entry>
+
+
+
+
+
+
+
+</properties>
