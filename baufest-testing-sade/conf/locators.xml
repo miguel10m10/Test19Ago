@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <!-- LOGIN PAGE-->
+    <entry key="cuit">username</entry>
+    <entry key="password">password</entry>
+    <entry key="button.acceder">.//*[@class='egovBoton']</entry>
+
+
+    <!-- HOME PAGE-->
+    <entry key="header.text">/html/body/div/div[1]/div/div/div[2]/table/tbody[2]/tr/td[2]/div/table/tbody/tr/td/table/tbody/tr/td/span</entry>
+
+
+</properties>
