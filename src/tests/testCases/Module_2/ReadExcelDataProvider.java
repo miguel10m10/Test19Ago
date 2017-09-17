@@ -1,4 +1,4 @@
-package tests.testCases;
+package tests.testCases.Module_2;
 
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
@@ -41,7 +41,7 @@ public class ReadExcelDataProvider extends MainTest{
 
     @DataProvider(name="empLogin")
     public Object[][] loginData() {
-        Object[][] arrayObject = getData.getExcelData("Libro1.xls","Hoja1");
+        Object[][] arrayObject = getData.getExcelData(".xls","Hoja1");
         return arrayObject;
     }
 }

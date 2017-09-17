@@ -14,7 +14,7 @@ import java.io.IOException;
 public class GetExcelFile {
 
     /**
-     * Read Excel File
+     * getExcelData
      * @author Miguel D'Alessio
      * */
         public String[][] getExcelData(String fileName, String sheetName) {

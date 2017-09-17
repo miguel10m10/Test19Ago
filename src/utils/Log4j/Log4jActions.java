@@ -20,6 +20,9 @@ public class Log4jActions {
             log.error(message);
         }else if(Itype.equals("fatal")){
             log.fatal(message);
+        }else if(Itype.equals("next")){
+            log.info("");
+            log.info("--------------------------------------------------------------");
         }else{
             log.info("Typo de mensaje no encontrado");
         }

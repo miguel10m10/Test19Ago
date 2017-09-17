@@ -3,16 +3,12 @@
 <properties>
 
     <!-- LOGIN -->
-    <entry key="marcadores.login.button">Marcadores - Click sobre el boton Login</entry>
-    <entry key="marcadores.login.user">Marcadores - Inserta el usuario</entry>
-    <entry key="marcadores.login.password">Marcadores - Inserta la contraseña</entry>
-    <entry key="marcadores.login.validation">Marcadores - Validado el inicio de sesion</entry>
+    <entry key="login.user">Inserta el Cuit</entry>
+    <entry key="login.password">Inserta la contraseña</entry>
+    <entry key="login.button.acceder">Click al boton Acceder</entry>
+    <entry key="login.validation">Validado el inicio de sesion</entry>
 
-
-
-    <entry key="testcase.fail">Marcadores - Test Case Failed</entry>
-    <entry key="testcase.pass">Marcadores - Test Case Passed</entry>
-
-
+    <entry key="testcase.fail">Test Case Failed</entry>
+    <entry key="testcase.pass">Test Case Passed</entry>
 
 </properties>

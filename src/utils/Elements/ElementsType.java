@@ -11,6 +11,13 @@ public class ElementsType {
 
     WaitTypes wait = new WaitTypes();
 
+    /**
+     * Elements Type
+     * @param driver
+     * @param element
+     * @param elementType
+     * @Exeption Exception
+     */
     public void ElementsType(WebDriver driver, By element, String elementType) throws Exception {
 
         if (elementType.equals("click")) {
@@ -19,6 +26,14 @@ public class ElementsType {
             driver.findElement(element).click();
         }
     }
+    /**
+     * Elements Type
+     * @param driver
+     * @param element
+     * @param elementType
+     * @param data
+     * @Exeption Exception
+     */
     public void ElementsType(WebDriver driver, By element, String elementType, String data) throws Exception {
 
         if (elementType.equals("send_key")) {

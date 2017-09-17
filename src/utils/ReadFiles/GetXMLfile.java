@@ -64,5 +64,20 @@ public class GetXMLfile {
 
         return property;
     }
+    /**
+     * Read XML locators
+     * @author Miguel D'Alessio
+     * */
+    public String GetLocators(String propertyMes) throws InvalidPropertiesFormatException,
+            FileNotFoundException, IOException{
+
+        String property = null;
+        java.util.Properties prop = new Properties();
+
+        prop.loadFromXML(new FileInputStream("conf/locators.xml"));
+        property = prop.getProperty(propertyMes);
+
+        return property;
+    }
 
 }

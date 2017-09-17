@@ -4,11 +4,8 @@
 <suite name="Suite1">
     <test name="nameSuite">
         <classes>
-            <class name="tests.testCases.Test1"/>
-            <class name="tests.testCases.ReadExcelDataProvider"/>
-            <class name="tests.testCases.ReadExcelDataProvider"/>
-            <class name="tests.testCases.ReadExcelDataProvider"/>
-            <class name="tests.testCases.ReadExcelDataProvider"/>
+
+
         </classes>
     </test>
 </suite>
