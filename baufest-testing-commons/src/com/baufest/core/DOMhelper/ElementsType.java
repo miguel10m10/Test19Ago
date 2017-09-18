@@ -2,7 +2,7 @@ package src.com.baufest.core.DOMhelper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import src.com.baufest.core.WaitManage.WaitTypes;
+import src.com.baufest.core.ManageWait.WaitTypes;
 
 /**
  * Created by miguel on 1/9/17.

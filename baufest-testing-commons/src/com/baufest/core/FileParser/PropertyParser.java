@@ -1,4 +1,4 @@
-package core.FileParser;
+package src.com.baufest.core.FileParser;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import src.com.baufest.core.ReadFiles.GetXMLfile;
 import src.com.baufest.core.ReportManager.ReportActions.Actions;
-import src.com.baufest.core.WaitManage.WaitTypes;
+import src.com.baufest.core.ManageWait.WaitTypes;
 
 /**
  * Created by miguel on 1/9/17.
