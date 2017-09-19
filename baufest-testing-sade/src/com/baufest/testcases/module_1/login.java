@@ -13,16 +13,16 @@ public class login extends MainClass {
         try {
             actionsReport.startTest(testCaseName, testCaseName, "Login", "Miguel Dalessio", testCaseName);
 
-            elements.ElementsType(this.getDriver(), By.id(config.GetLocators("cuit")), "send_key", userName);
+            elements.ElementsType(this.initializeDriver.getDriver(), By.id(config.GetLocators("cuit")), "send_key", userName);
             actionsReport.infoTest(config.GetMessageProperties("login.user"));
 
-            elements.ElementsType(this.getDriver(), By.id(config.GetLocators("password")), "send_key", password);
+            elements.ElementsType(this.initializeDriver.getDriver(), By.id(config.GetLocators("password")), "send_key", password);
             actionsReport.infoTest(config.GetMessageProperties("login.password"));
 
-            elements.ElementsType(this.getDriver(), By.xpath(config.GetLocators("button.acceder")), "click");
+            elements.ElementsType(this.initializeDriver.getDriver(), By.xpath(config.GetLocators("button.acceder")), "click");
             actionsReport.infoTest(config.GetMessageProperties("login.button.acceder"));
 
-            assertionsType.equals(this.getDriver(), By.xpath(config.GetLocators("header.text")), "Escritorio Único");
+            assertionsType.equals(this.initializeDriver.getDriver(), By.xpath(config.GetLocators("header.text")), "Escritorio Único");
             actionsReport.infoTest(config.GetMessageProperties("login.validation"));
 
         } catch (ActionExceptions e) {

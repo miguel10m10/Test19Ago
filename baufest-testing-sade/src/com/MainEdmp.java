@@ -14,6 +14,7 @@ public class MainEdmp {
 	        try {
 	        	TestsLoader tests_loader=new TestsLoader();
 	        	tests_loader.setXml("./resources/testloader/tests-loader-edmp.xml");
+	        	tests_loader.setXml("./resources/testloader/tests-loader-edmp.xml");
 	        	tests_loader.run();
 	        } catch (Exception ex) {
 	        	logger.error(ex.getMessage());
