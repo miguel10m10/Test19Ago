@@ -1,15 +1,15 @@
 package src.com.baufest.core.Exceptions;
 
-import tests.MainTest;
 import src.com.baufest.core.ReportManager.ReportActions.Actions;
+import src.com.baufest.initialize.InitializeDriver;
 
 public class ActionExceptions extends Exception {
 
     Actions actReport = new Actions();
-    MainTest main = new MainTest();
+    InitializeDriver ini = new InitializeDriver();
 
     public ActionExceptions() throws Exception {
-        actReport.failWithScreenShot(main.getDriver(), "Problems in the actions");
+        actReport.failWithScreenShot(ini.getDriver(), "Problems in the actions");
     }
 
 }

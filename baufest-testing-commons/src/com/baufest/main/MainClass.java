@@ -1,6 +1,5 @@
 package src.com.baufest.main;
 
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -13,7 +12,7 @@ public class MainClass extends InitializeMethods{
 
     @DataProvider(name="Login")
     public Object[][] loginData() {
-        Object[][] arrayObject = getData.getExcelData("src/tests/testCases/Module_1/login.xls","Hoja1");
+        Object[][] arrayObject = getData.getExcelData("login.xls","Hoja1");
         return arrayObject;
     }
 
