@@ -21,11 +21,11 @@ public class InitializeDriver {
     public void StartBrowser() throws IOException, InterruptedException {
 
         if (firefox == true) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/FirefoxDriver/geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/FirefoxDriver/geckodriver");
             driver = new FirefoxDriver();
 
         } else {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/ChromeDriver/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/ChromeDriver/chromedriver");
             driver = new ChromeDriver();
         }
 

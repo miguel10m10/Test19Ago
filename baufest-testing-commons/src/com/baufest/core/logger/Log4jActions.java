@@ -11,7 +11,7 @@ public class Log4jActions {
     static Logger log = Logger.getLogger(Log4jActions.class);
 
     public void Log4jActions(String message, String type){
-        PropertyConfigurator.configure("log4j.properties");
+        PropertyConfigurator.configure(System.getProperty("user.dir")+"/baufest-testing-commons/log4j.properties");
         String Itype = type.toLowerCase();
 
         if (Itype.equals("info")){
