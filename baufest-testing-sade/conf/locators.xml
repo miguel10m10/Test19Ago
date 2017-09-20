@@ -4,7 +4,7 @@
     <!-- LOGIN PAGE-->
     <entry key="correo">username</entry>
     <entry key="password">password</entry>
-    <entry key="button.acceder">.btn.btn-primary</entry>
+    <entry key="button.acceder">//div/div/div[3]/div/div/form/button</entry>
 
     <!-- HOME PAGE - GESTOR DE CITAS-->
     <entry key="header.text">//div/div[2]/h1</entry>

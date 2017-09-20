@@ -11,11 +11,10 @@ import src.com.baufest.initialize.InitializeDriver;
 /**
  * Created by miguel on 2/9/17.
  */
-public class Actions {
+public class Actions extends InitializeDriver{
 
     TakeScreenShot screenShot = new TakeScreenShot();
     Log4jActions log4j = new Log4jActions();
-    InitializeDriver wDriver = new InitializeDriver();
 
     public void startTest(String name, String description, String category, String author, String message){
         ExtentTestManager.startTest(name, description);
@@ -39,14 +38,12 @@ public class Actions {
         log4j.Log4jActions(message, "error");
     }
     public void failWithScreenShot(String message) throws Exception {
-        WebDriver driver = wDriver.getDriver();
-        ExtentTestManager.getTest().log(LogStatus.ERROR, ExtentTestManager.getTest().addScreenCapture(screenShot.getScreenshot(driver, message)));
+    //    ExtentTestManager.getTest().log(LogStatus.ERROR, ExtentTestManager.getTest().addScreenCapture(screenShot.getScreenshot(this.driver, message)));
         log4j.Log4jActions(message, "error");
         throw new Exception(message);
     }
     public void passWithScreenShot( String message) throws Exception {
-        WebDriver driver = wDriver.getDriver();
-        ExtentTestManager.getTest().log(LogStatus.PASS, ExtentTestManager.getTest().addScreenCapture(screenShot.getScreenshot(driver, message)));
+   //     ExtentTestManager.getTest().log(LogStatus.PASS, ExtentTestManager.getTest().addScreenCapture(screenShot.getScreenshot(this.driver, message)));
         log4j.Log4jActions(message, "info");
     }
     public void AssertPassTest(String message){

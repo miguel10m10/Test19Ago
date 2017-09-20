@@ -4,16 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.reporters.jq.Main;
+import src.com.baufest.initialize.InitializeDriver;
+import src.com.baufest.main.MainClass;
 
 /**
  * Created by miguel on 27/8/17.
  */
-public class WaitTypes {
+public class WaitTypes{
 
-    public void waitValidations(WebDriver driver, By element, String type) throws Exception {
+    public void waitValidations(By element, String type) throws Exception {
 
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+    //    WebDriver driver = this.initializeDriver.getDriver();
 
+   /*     WebDriverWait wait = new WebDriverWait(driver, 15);
         String types = type.toLowerCase();
 
         if (types.equals("visible")) {
@@ -24,7 +28,7 @@ public class WaitTypes {
 
         } else {
             throw new Exception();
-        }
+        }*/
     }
 }
 

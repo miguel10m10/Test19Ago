@@ -5,11 +5,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.AfterSuite;
-import src.com.baufest.core.FileParser.PropertyParser;
+import src.com.baufest.initialize.InitializeDriver;
 import src.com.baufest.initialize.InitializeMethods;
 import java.io.IOException;
 
 public class MainClass extends InitializeMethods{
+
+    protected InitializeDriver initializeDriver = new InitializeDriver();
 
     @DataProvider(name="Login")
     public Object[][] loginData() {
@@ -22,6 +24,7 @@ public class MainClass extends InitializeMethods{
 
         initializeDriver.StartBrowser();
         //parser = new PropertyParser("ObjectRepo.properties");
+
     }
 
     @AfterMethod
@@ -34,4 +37,5 @@ public class MainClass extends InitializeMethods{
     public void AfterSuite(){
         // sendEmail.sendGmailEmail();
     }
+
 }

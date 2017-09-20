@@ -15,17 +15,17 @@ import java.util.concurrent.TimeUnit;
 public class InitializeDriver {
 
     private GetXMLfile getXMLfile = new GetXMLfile();
+    private static WebDriver driver = null;
     boolean firefox = false;
-    WebDriver driver;
 
     public void StartBrowser() throws IOException, InterruptedException {
 
         if (firefox == true) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/FirefoxDriver/geckodriver");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/FirefoxDriver/geckodriver.exe");
             driver = new FirefoxDriver();
 
         } else {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/ChromeDriver/chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/ChromeDriver/chromedriver.exe");
             driver = new ChromeDriver();
         }
 
@@ -47,4 +47,6 @@ public class InitializeDriver {
     public void setDriver(WebDriver driver) {
         this.driver = driver;
     }
+
+
 }
