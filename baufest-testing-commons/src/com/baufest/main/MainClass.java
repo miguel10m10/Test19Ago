@@ -20,7 +20,7 @@ public class MainClass extends InitializeMethods{
     public void BeforeMethod() throws InterruptedException, IOException {
 
         initializeDriver.StartBrowser();
-        parser = new PropertyParser("ObjectRepo.properties");
+        //parser = new PropertyParser("ObjectRepo.properties");
     }
 
     @AfterMethod

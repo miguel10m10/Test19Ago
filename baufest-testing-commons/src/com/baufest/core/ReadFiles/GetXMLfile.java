@@ -21,7 +21,7 @@ public class GetXMLfile {
         String property = null;
         java.util.Properties prop = new Properties();
 
-        prop.loadFromXML(new FileInputStream("conf/config-properties.xml"));
+        prop.loadFromXML(new FileInputStream(System.getProperty("user.dir")+"/baufest-testing-sade/conf/config-properties.xml"));
         property = prop.getProperty(propertyConf);
 
         return property;
@@ -40,10 +40,10 @@ public class GetXMLfile {
 
         if(Leng.equals("ES"))
         {
-            prop.loadFromXML(new FileInputStream("conf/messages-ES-properties.xml"));
+            prop.loadFromXML(new FileInputStream(System.getProperty("user.dir")+"/baufest-testing-sade/conf/messages-ES-properties.xml"));
             property = prop.getProperty(propertyMessage);
         }else{
-            prop.loadFromXML(new FileInputStream("conf/messages-EN-properties.xml"));
+            prop.loadFromXML(new FileInputStream(System.getProperty("user.dir")+"/baufest-testing-sade/conf/messages-EN-properties.xml"));
             property = prop.getProperty(propertyMessage);
         }
         return property;
@@ -59,7 +59,7 @@ public class GetXMLfile {
         String property = null;
         java.util.Properties prop = new Properties();
 
-        prop.loadFromXML(new FileInputStream("conf/data-properties.xml"));
+        prop.loadFromXML(new FileInputStream(System.getProperty("user.dir")+"/baufest-testing-sade/conf/data-properties.xml"));
         property = prop.getProperty(propertyMes);
 
         return property;
@@ -74,7 +74,7 @@ public class GetXMLfile {
         String property = null;
         java.util.Properties prop = new Properties();
 
-        prop.loadFromXML(new FileInputStream("conf/locators.xml"));
+        prop.loadFromXML(new FileInputStream(System.getProperty("user.dir")+"/baufest-testing-sade/conf/locators.xml"));
         property = prop.getProperty(propertyMes);
 
         return property;
