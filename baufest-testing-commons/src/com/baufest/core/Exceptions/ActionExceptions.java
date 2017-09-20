@@ -9,7 +9,7 @@ public class ActionExceptions extends Exception {
     InitializeDriver ini = new InitializeDriver();
 
     public ActionExceptions() throws Exception {
-        actReport.failWithScreenShot(ini.getDriver(), "Problems in the actions");
+        actReport.failWithScreenShot("Problems in the actions");
     }
 
 }

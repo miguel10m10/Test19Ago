@@ -6,7 +6,6 @@ import src.com.baufest.core.FileParser.PropertyParser;
 import src.com.baufest.core.ReadFiles.GetExcelFile;
 import src.com.baufest.core.ReadFiles.GetXMLfile;
 import src.com.baufest.core.ReportManager.ReportActions.Actions;
-import src.com.baufest.initialize.InitializeDriver;
 
 /**
  * Created by miguel on 17/9/17.

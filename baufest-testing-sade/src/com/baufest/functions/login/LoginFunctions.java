@@ -13,16 +13,16 @@ public class LoginFunctions extends MainClass {
 
     public void LoginSuccessful(String userName, String password) throws Exception {
 
-        elements.ElementsType(this.initializeDriver.getDriver(), By.id(config.GetLocators("cuit")), "send_key", userName);
+        elements.ElementsType(this.initializeDriver.getDriver(), By.id(config.GetLocators("correo")), "send_key", userName);
         actionsReport.infoTest(config.GetMessageProperties("login.user"));
 
         elements.ElementsType(this.initializeDriver.getDriver(), By.id(config.GetLocators("password")), "send_key", password);
         actionsReport.infoTest(config.GetMessageProperties("login.password"));
 
-        elements.ElementsType(this.initializeDriver.getDriver(), By.xpath(config.GetLocators("button.acceder")), "click");
+        elements.ElementsType(this.initializeDriver.getDriver(), By.cssSelector(config.GetLocators("button.acceder")), "click");
         actionsReport.infoTest(config.GetMessageProperties("login.button.acceder"));
 
-        assertionsType.equals(this.initializeDriver.getDriver(), By.xpath(config.GetLocators("header.text")), "Escritorio Único");
+        assertionsType.equals(this.initializeDriver.getDriver(), By.xpath(config.GetLocators("header.text")), "Administrador Gestor de Citas");
         actionsReport.infoTest(config.GetMessageProperties("login.validation"));
     }
 }
