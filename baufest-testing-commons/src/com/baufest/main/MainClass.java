@@ -1,21 +1,21 @@
 package src.com.baufest.main;
 
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.AfterSuite;
 import src.com.baufest.initialize.InitializeDriver;
 import src.com.baufest.initialize.InitializeMethods;
+
 import java.io.IOException;
 
-public class MainClass extends InitializeMethods{
+public class MainClass extends InitializeMethods {
 
-    protected InitializeDriver initializeDriver = new InitializeDriver();
-
-    @DataProvider(name="Login")
+    @DataProvider(name = "Organismo")
     public Object[][] loginData() {
-        Object[][] arrayObject = getData.getExcelData("login.xls","Hoja1");
+        Object[][] arrayObject = getData.getExcelData("Organismo.xls", "Sheet1");
         return arrayObject;
     }
 
@@ -34,7 +34,7 @@ public class MainClass extends InitializeMethods{
     }
 
     @AfterSuite
-    public void AfterSuite(){
+    public void AfterSuite() {
         // sendEmail.sendGmailEmail();
     }
 

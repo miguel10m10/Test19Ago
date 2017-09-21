@@ -2,6 +2,7 @@ package src.com.baufest.core.DOMhelper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import src.com.baufest.core.Enums.WaitType;
 import src.com.baufest.core.ManageWait.WaitTypes;
 import src.com.baufest.initialize.InitializeDriver;
 import src.com.baufest.initialize.InitializeMethods;
@@ -16,16 +17,22 @@ public class ElementsType {
 
     /**
      * Elements Type
+     *
      * @param element
      * @param elementType
      * @Exeption Exception
      */
     public void ElementsType(WebDriver driver, By element, String elementType) throws Exception {
 
-        if (elementType.equals("click")) {
-
-            wait.waitValidations(element, "visible");
-            driver.findElement(element).click();
+        switch (elementType) {
+            case "click":
+                wait.waitValidations(driver, element, WaitType.VISIBILITY.element());
+                //wait.waitValidations(driver, element, "clickable");
+                driver.findElement(element).click();
+                break;
+            default:
+                System.out.println("La edad no es crítica");
+                break;
         }
     }
     /**
@@ -37,15 +44,14 @@ public class ElementsType {
      */
     public void ElementsType(WebDriver driver, By element, String elementType, String data) throws Exception {
 
-     //   WebDriver driver = this.initializeDriver.getDriver();
-
-        if (elementType.equals("send_key")) {
-
-           // wait.waitValidations(element, "visible");
-            driver.findElement(element).clear();
-            driver.findElement(element).sendKeys(data);
-
-
+        switch (elementType) {
+            case "send_key":
+                wait.waitValidations(driver, element, WaitType.VISIBILITY.element());
+                driver.findElement(element).clear();
+                driver.findElement(element).sendKeys(data);
+                break;
+            default:
+                throw new Exception();
         }
     }
 }

@@ -36,7 +36,8 @@ public class InitializeDriver {
         driver.manage().timeouts().implicitlyWait(15000,TimeUnit.MILLISECONDS);
 
     }
-    public void EndBrowser(){
+
+    public void EndBrowser() {
         driver.quit();
     }
 
