@@ -2,9 +2,6 @@ package src.com.baufest.testcases.Organismo;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-
-import src.com.baufest.functions.organismo.CreateOrganismo;
 import src.com.baufest.functions.paginaPrincipal.PaginaPrincipal;
 import src.com.baufest.functions.login.Login;
 import src.com.baufest.main.MainClass;
