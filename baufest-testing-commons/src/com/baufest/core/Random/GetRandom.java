@@ -11,7 +11,6 @@ public class GetRandom {
     public int randomRank(int min, int max){
 
         int random = rand.nextInt((max - min) + 1) + min;
-
         return random;
     }
 }
