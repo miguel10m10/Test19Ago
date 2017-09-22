@@ -16,11 +16,7 @@ public class MainClass extends InitializeMethods {
 
     protected int Random;
 
-    @DataProvider(name = "Organismo")
-    public Object[][] loginData() {
-        Object[][] arrayObject = getData.getExcelData("Organismo.xls", "Sheet1");
-        return arrayObject;
-    }
+
 
     @BeforeMethod
     public void BeforeMethod() throws InterruptedException, IOException {

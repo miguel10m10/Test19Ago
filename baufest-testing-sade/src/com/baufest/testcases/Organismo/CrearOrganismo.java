@@ -1,5 +1,6 @@
 package src.com.baufest.testcases.Organismo;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
@@ -14,6 +15,12 @@ public class CrearOrganismo extends MainClass{
     Login login = new Login();
     PaginaPrincipal homePage = new PaginaPrincipal();
     CreateOrganismo createOrganismo = new CreateOrganismo();
+    
+    @DataProvider(name = "Organismo")
+    public Object[][] loginData() {
+        Object[][] arrayObject = getData.getExcelData("Organismo.xls", "Sheet1");
+        return arrayObject;
+    }
 
     @Test(dataProvider="Organismo")
     public void Test1(String testCaseName, String userName, String password, String OrgName) throws Exception {
