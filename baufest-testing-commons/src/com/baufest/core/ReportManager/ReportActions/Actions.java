@@ -23,35 +23,35 @@ public class Actions extends InitializeDriver{
     }
     public void infoTest(String message){
         ExtentTestManager.getTest().log(LogStatus.INFO, message);
-        log4j.Log4jActions(message, "info");
+        //log4j.Log4jActions(message, "info");
     }
     public void skipTest(String message){
         ExtentTestManager.getTest().log(LogStatus.SKIP, message);
-        log4j.Log4jActions(message, "info");
+        //log4j.Log4jActions(message, "info");
     }
     public void passTest(String message){
         ExtentTestManager.getTest().log(LogStatus.PASS, message);
-        log4j.Log4jActions(message, "info");
+        //log4j.Log4jActions(message, "info");
     }
     public void failTest(String message){
         ExtentTestManager.getTest().log(LogStatus.FAIL, message);
-        log4j.Log4jActions(message, "error");
+        //log4j.Log4jActions(message, "error");
     }
     public void failWithScreenShot(String message) throws Exception {
     //    ExtentTestManager.getTest().log(LogStatus.ERROR, ExtentTestManager.getTest().addScreenCapture(screenShot.getScreenshot(this.driver, message)));
-        log4j.Log4jActions(message, "error");
+        //log4j.Log4jActions(message, "error");
         throw new Exception(message);
     }
     public void passWithScreenShot( String message) throws Exception {
    //     ExtentTestManager.getTest().log(LogStatus.PASS, ExtentTestManager.getTest().addScreenCapture(screenShot.getScreenshot(this.driver, message)));
-        log4j.Log4jActions(message, "info");
+        //log4j.Log4jActions(message, "info");
     }
     public void AssertPassTest(String message){
-        log4j.Log4jActions(message, "info");
+        //log4j.Log4jActions(message, "info");
         Assert.assertEquals(ExtentTestManager.getTest().getRunStatus(), LogStatus.PASS);
     }
     public void AssertFailTest(String message) throws Exception {
-        log4j.Log4jActions(message, "info");
+        //log4j.Log4jActions(message, "info");
         Assert.assertEquals(ExtentTestManager.getTest().getRunStatus(), LogStatus.FAIL);
         throw new Exception("intentional failure");
     }

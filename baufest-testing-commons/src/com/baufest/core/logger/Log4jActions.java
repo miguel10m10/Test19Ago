@@ -2,6 +2,9 @@ package src.com.baufest.core.logger;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import src.com.baufest.core.ReadFiles.GetXMLfile;
+
+import java.io.IOException;
 
 /**
  * Created by miguel on 9/9/17.
@@ -9,9 +12,10 @@ import org.apache.log4j.PropertyConfigurator;
 public class Log4jActions {
 
     static Logger log = Logger.getLogger(Log4jActions.class);
+    private GetXMLfile getXMLfile = new GetXMLfile();
 
-    public void Log4jActions(String message, String type){
-        PropertyConfigurator.configure(System.getProperty("user.dir")+"/baufest-testing-commons/log4j.properties");
+    public void Log4jActions(String message, String type) throws IOException {
+        PropertyConfigurator.configure(System.getProperty("user.dir") + getXMLfile.GetProperties("log4j.prop"));
         String Itype = type.toLowerCase();
 
         if (Itype.equals("info")){
@@ -22,7 +26,6 @@ public class Log4jActions {
             log.fatal(message);
         }else if(Itype.equals("next")){
             log.info("");
-            log.info("--------------------------------------------------------------");
         }else{
             log.info("Typo de mensaje no encontrado");
         }

@@ -16,26 +16,43 @@ public class InitializeDriver {
 
     private GetXMLfile getXMLfile = new GetXMLfile();
     private static WebDriver driver = null;
-    boolean firefox = false;
+
 
     public void StartBrowser() throws IOException, InterruptedException {
 
-        if (firefox == true) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/FirefoxDriver/geckodriver.exe");
-            driver = new FirefoxDriver();
+        String browser = getXMLfile.GetConfigProperties("browser");
+        String os = getXMLfile.GetConfigProperties("os");
 
+        if (browser.equals("firefox")) {
+            switch (os) {
+                case "win":
+                    System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("firefox.win"));
+                    driver = new FirefoxDriver();
+                    break;
+                default:
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("firefox.mac"));
+                    driver = new FirefoxDriver();
+                    break;
+            }
         } else {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/baufest-testing-commons/resources/ChromeDriver/chromedriver.exe");
-            driver = new ChromeDriver();
+            switch (os) {
+                case "win":
+                    System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("chrome.win"));
+                    driver = new ChromeDriver();
+                    break;
+                default:
+
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("chrome.mac"));
+                    driver = new ChromeDriver();
+                    break;
+            }
         }
-
-        setDriver(driver);
-        driver.get(getXMLfile.GetConfigProperties("url"));
-        Thread.sleep(3000);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15000,TimeUnit.MILLISECONDS);
-
-    }
+            setDriver(driver);
+            driver.get(getXMLfile.GetConfigProperties("url"));
+            Thread.sleep(3000);
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
+        }
 
     public void EndBrowser() {
         driver.quit();

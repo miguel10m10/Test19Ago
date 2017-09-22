@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+
+    <entry key="log4j.prop">/baufest-testing-commons/log4j.properties</entry>
+    <entry key="email.report.path">test-output/report/extent.html</entry>
+    <entry key="screenshots.path">/test-output/images/</entry>
+    <entry key="log4j.prop">/baufest-testing-commons/log4j.properties</entry>
+    <entry key="firefox.mac">/baufest-testing-commons/resources/FirefoxDriver/mac/geckodriver</entry>
+    <entry key="firefox.win">/baufest-testing-commons/resources/FirefoxDriver/win/geckodriver.exe</entry>
+    <entry key="chrome.mac">/baufest-testing-commons/resources/ChromeDriver/mac/chromedriver</entry>
+    <entry key="chrome.win">/baufest-testing-commons/resources/ChromeDriver/win/chromedriver.exe</entry>
+
+
+
+
+
+
+
+
+
+</properties>

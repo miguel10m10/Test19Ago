@@ -27,6 +27,20 @@ public class GetXMLfile {
         return property;
     }
     /**
+     * Read XML Properties
+     * @author Miguel D'Alessio
+     * */
+    public String GetProperties(String propertyConf) throws IOException{
+
+        String property = null;
+        java.util.Properties prop = new Properties();
+
+        prop.loadFromXML(new FileInputStream(System.getProperty("user.dir")+"/baufest-testing-commons/conf/properties.xml"));
+        property = prop.getProperty(propertyConf);
+
+        return property;
+    }
+    /**
      * Read XML Messages Properties
      * @author Miguel D'Alessio
      * */

@@ -1,5 +1,8 @@
 package src.com.baufest.core.ManageEmail;
 
+import src.com.baufest.core.ReadFiles.GetXMLfile;
+
+import java.io.IOException;
 import java.util.Properties;
 import javax.activation.*;
 import javax.mail.*;
@@ -10,10 +13,11 @@ import javax.mail.internet.MimeMultipart;
 
 public class SendEmailReport {
 
-    public void sendGmailEmail(){
+    public void sendGmailEmail() throws IOException {
 
         final String username = "miguelangelmuro10@gmail.com";
         final String password = "brigida2020";
+        GetXMLfile getXMLfile = new GetXMLfile();
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", true);
@@ -42,7 +46,7 @@ public class SendEmailReport {
             Multipart multipart = new MimeMultipart();
 
             messageBodyPart = new MimeBodyPart();
-            String file = "test-output/extent.html";
+            String file = getXMLfile.GetProperties("email.report.path");
             String fileName = "extent.html";
             DataSource source = new FileDataSource(file);
             messageBodyPart.setDataHandler(new DataHandler(source));
