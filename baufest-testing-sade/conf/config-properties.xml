@@ -4,7 +4,7 @@
     <entry key="url">https://sigecir7.qa.gcba.gob.ar/</entry>
 
     <!-- win, mac-->
-    <entry key="os">mac</entry>
+    <entry key="os">win</entry>
     <!-- firefox, chrome-->
     <entry key="browser">chrome</entry>
 

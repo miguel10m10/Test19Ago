@@ -18,11 +18,12 @@ public class CrearOrganismo extends MainClass{
     @Test(dataProvider="Organismo")
     public void Test1(String testCaseName, String userName, String password, String OrgName) throws Exception {
         try {
+
             //actionsReport.startTest(testCaseName, testCaseName, "Login", "Miguel Dalessio", testCaseName);
 
             login.LoginSuccessful(this.initializeDriver.getDriver(), userName, password);
             homePage.OptionModuleAdministrar(this.initializeDriver.getDriver(), "Organismo");
-            createOrganismo.CreateOrganismo(this.initializeDriver.getDriver(), OrgName+1);
+            createOrganismo.CreateOrganismo(this.initializeDriver.getDriver(), OrgName+this.getRandom());
 
         } catch (ActionExceptions e) {
             throw new ActionExceptions();

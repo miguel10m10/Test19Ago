@@ -10,8 +10,11 @@ import src.com.baufest.initialize.InitializeDriver;
 import src.com.baufest.initialize.InitializeMethods;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class MainClass extends InitializeMethods {
+
+    protected int Random;
 
     @DataProvider(name = "Organismo")
     public Object[][] loginData() {
@@ -23,6 +26,7 @@ public class MainClass extends InitializeMethods {
     public void BeforeMethod() throws InterruptedException, IOException {
 
         initializeDriver.StartBrowser();
+        setRandom(getRandom.randomRank(1,100000));
         //parser = new PropertyParser("ObjectRepo.properties");
 
     }
@@ -37,5 +41,13 @@ public class MainClass extends InitializeMethods {
     public void AfterSuite() {
         // sendEmail.sendGmailEmail();
     }
+    public int getRandom() {
+        return Random;
+    }
+
+    public void setRandom(int random) {
+        Random = random;
+    }
+
 
 }

@@ -30,14 +30,14 @@ public class InitializeDriver {
                     driver = new FirefoxDriver();
                     break;
                 default:
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("firefox.mac"));
+                    System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("firefox.mac"));
                     driver = new FirefoxDriver();
                     break;
             }
         } else {
             switch (os) {
                 case "win":
-                    System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("chrome.win"));
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + getXMLfile.GetProperties("chrome.win"));
                     driver = new ChromeDriver();
                     break;
                 default:
