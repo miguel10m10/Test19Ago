@@ -15,19 +15,26 @@ public class Log4jActions {
     private GetXMLfile getXMLfile = new GetXMLfile();
 
     public void Log4jActions(String message, String type) throws IOException {
-        PropertyConfigurator.configure(System.getProperty("user.dir") + getXMLfile.GetProperties("log4j.prop"));
-        String Itype = type.toLowerCase();
 
-        if (Itype.equals("info")){
-            log.info(message);
-        }else if(Itype.equals("error")){
-            log.error(message);
-        }else if(Itype.equals("fatal")){
-            log.fatal(message);
-        }else if(Itype.equals("next")){
-            log.info("");
-        }else{
-            log.info("Typo de mensaje no encontrado");
+        PropertyConfigurator.configure(System.getProperty("user.dir") + getXMLfile.GetProperties("log4j.prop"));
+        String iType = type.toLowerCase();
+
+        switch (iType) {
+            case "info":
+                log.info(message);
+                break;
+            case "error":
+                log.error(message);
+                break;
+            case "fatal":
+                log.fatal(message);
+                break;
+            case "next":
+                log.info(">>>>> ---------------------------------------------------------------------------");
+                break;
+            default:
+                log.info("Tipo de mensaje no encontrado");
+                break;
         }
     }
 }

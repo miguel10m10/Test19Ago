@@ -19,13 +19,13 @@ public class AssertionsType {
     GetXMLfile getXMLfile = new GetXMLfile();
     InitializeDriver driver = new InitializeDriver();
 
-    public void AssertValidation(WebDriver driver, By element, String text2, String typeOfAssertion) throws Exception {
+    public void AssertValidation(By element, String text2, String typeOfAssertion) throws Exception {
 
         try {
             switch (typeOfAssertion) {
                 case "equals":
-                    wait.waitValidations(driver, element, WaitType.VISIBILITY.element());
-                    String textPage = driver.findElement(element).getText();
+                    wait.waitValidations(element, WaitType.VISIBILITY.element());
+                    String textPage = driver.getDriver().findElement(element).getText();
                     Assert.assertEquals(textPage, text2);
                     break;
                 case "notEquals":

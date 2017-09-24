@@ -15,8 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class InitializeDriver {
 
     private GetXMLfile getXMLfile = new GetXMLfile();
-    private static WebDriver driver = null;
-
+    private static WebDriver driver;
 
     public void StartBrowser() throws IOException, InterruptedException {
 
@@ -47,11 +46,11 @@ public class InitializeDriver {
                     break;
             }
         }
-            setDriver(driver);
-            driver.get(getXMLfile.GetConfigProperties("url"));
+            driver.get("https://www.parley.com.com.ve");
             Thread.sleep(3000);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
+            setDriver(driver);
         }
 
     public void EndBrowser() {
