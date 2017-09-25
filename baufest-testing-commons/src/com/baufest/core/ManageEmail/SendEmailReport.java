@@ -16,7 +16,7 @@ public class SendEmailReport {
     public void sendGmailEmail() throws IOException {
 
         final String username = "miguelangelmuro10@gmail.com";
-        final String password = "brigida2020";
+        final String password = "";
         GetXMLfile getXMLfile = new GetXMLfile();
 
         Properties props = new Properties();
