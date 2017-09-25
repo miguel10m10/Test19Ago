@@ -19,6 +19,8 @@ public class test1 extends MainClass{
     public void Test1() throws Exception {
 
 
+        System.out.println(Thread.currentThread());
+
         actionsReport.startTest("Login", "Login en la app", "Login", "Miguel Dalessio", "Login");
         actionsReport.infoTest("PASO 1");
         actionsReport.infoTest("PASO 2");
