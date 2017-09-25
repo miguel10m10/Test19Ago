@@ -13,9 +13,11 @@ import src.com.baufest.main.MainClass;
  */
 public class WaitTypes {
 
-    public void waitValidations(WebDriver driver, By element, String type) throws Exception {
+    InitializeDriver driver = new InitializeDriver();
 
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+    public void waitValidations(By element, String type) throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver.getDriver(), 15);
         String types = type.toLowerCase();
 
         switch (types) {

@@ -14,6 +14,7 @@ import src.com.baufest.main.MainClass;
 public class ElementsType {
 
     WaitTypes wait = new WaitTypes();
+    InitializeDriver driver = new InitializeDriver();
 
     /**
      * Elements Type
@@ -22,13 +23,13 @@ public class ElementsType {
      * @param elementType
      * @Exeption Exception
      */
-    public void ElementsType(WebDriver driver, By element, String elementType) throws Exception {
+    public void ElementsType(By element, String elementType) throws Exception {
 
         switch (elementType) {
             case "click":
-                wait.waitValidations(driver, element, WaitType.VISIBILITY.element());
+                wait.waitValidations(element, WaitType.VISIBILITY.element());
                 //wait.waitValidations(driver, element, "clickable");
-                driver.findElement(element).click();
+                driver.getDriver().findElement(element).click();
                 break;
             default:
                 System.out.println("La edad no es crítica");
@@ -42,13 +43,13 @@ public class ElementsType {
      * @param data
      * @Exeption Exception
      */
-    public void ElementsType(WebDriver driver, By element, String elementType, String data) throws Exception {
+    public void ElementsType(By element, String elementType, String data) throws Exception {
 
         switch (elementType) {
             case "send_key":
-                wait.waitValidations(driver, element, WaitType.VISIBILITY.element());
-                driver.findElement(element).clear();
-                driver.findElement(element).sendKeys(data);
+                wait.waitValidations(element, WaitType.VISIBILITY.element());
+                driver.getDriver().findElement(element).clear();
+                driver.getDriver().findElement(element).sendKeys(data);
                 break;
             default:
                 throw new Exception();

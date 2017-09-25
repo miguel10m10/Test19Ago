@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="example suite 1" verbose="1" >
+    <test name="Regression suite 1" >
+        <classes>
+            <class name="src.com.baufest.testcases.test.test1"/>
+            <class name="src.com.baufest.testcases.test.test2"/>
+            <class name="src.com.baufest.testcases.test.test3"/>
+        </classes>
+    </test>
+</suite>
