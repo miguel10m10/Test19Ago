@@ -1,4 +1,4 @@
-package PageFactory;
+package src.com.baufest.pages.login;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,20 +16,20 @@ public class LoginPage {
     }
 
     @FindBy(how = How.XPATH, using = ".//*[@id='account']/a")
-    static WebElement lnk_MyAccount;
+    public WebElement myAccount;
 
     @FindBy(how = How.ID, using = "log")
     @CacheLookup
-    static WebElement txtbx_UserName;
+    public WebElement userName;
 
     @FindBy(how = How.ID, using = "pwd")
     @CacheLookup
-    static WebElement txtbx_Password;
+    public WebElement password;
 
     @FindBy(how = How.NAME, using = "submit")
-    static WebElement btn_Login;
+    public WebElement buttonLogin;
 
     @FindBy(how = How.XPATH, using = ".//*[@id='account_logout']/a")
-    static WebElement lnk_LogOut;
+    public WebElement logout;
 
 }

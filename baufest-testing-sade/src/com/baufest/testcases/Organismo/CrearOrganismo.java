@@ -11,7 +11,7 @@ import src.com.baufest.main.MainClass;
 
 public class CrearOrganismo extends MainClass{
 
-    FuncLogin login = new FuncLogin();
+    //FuncLogin login = new FuncLogin();
     FuncPaginaPrincipal homePage = new FuncPaginaPrincipal();
     FuncCrearOrganismo createOrganismo = new FuncCrearOrganismo();
     DataResources dataManager = new DataResources();
